@@ -16,24 +16,20 @@
     <div class="container">
         <div class="header" text-center clearfix>
             <h1>Trivia Game</h1>
+            <p id="remaining-time" class="lead">Remaining Time: <span id="timer"></span></p>
         </div>
         <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <div id="game">
-                    <h2>FRIENDS Trivia Game</h2>
-                    <p id="remaining-time" class="lead">Remaining Time: <span id="timer"></span></p>
-                    <p id="question" class="lead"></p>
-                </div>
-                <div id="results"></div>
+            <div class="question-div"></div>
+            <div class="answer-div"></div>
+            <div id="results">
+                <h2 id="correct">Correct</h2>
+                <h2 id="incorrect">Incorrect:</h2>
+                <h2 id="unaswered">Unaswered:</h2>
             </div>
         </div>
 
-        <div class="row">
-            <div id="choices" class="text-center">
-                <button id="start" class="btn btn-info btn-lg">Start</button>
-                <div id="options"></div>
-            </div>
-        </div>
+        <button id="start" class="btn btn-info btn-lg">Start</button>
+        <button id="reset" class="btn btn-info btn-lg">Start</button>
 
     </div>
 
