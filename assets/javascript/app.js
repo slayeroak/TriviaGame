@@ -1,5 +1,6 @@
 // Global Variables
-
+var timeLeft = 20;
+var timeInterval ;
 
 
 // Question Object Array 
@@ -132,7 +133,23 @@ var questionsArray = [
 
 
 
-// Gamaplay Code
+// Gamaplay Functions
+
+// Question Timer Function
+function timerCountdown() {
+    // set the timer to 20seconds
+    timeLeft = 20;
+    // clear the time interval variable
+    clearInterval(timeInterval);
+    // use setInterval
+    timeInterval = setInterval(function(){
+        // decrement the timeLeft
+        timeLeft--;
+        // display the timeLeft to the time left div
+        $("#remaining-time").html(timeLeft);
+    })
+
+};
 
 $(document).ready(function() {
 
