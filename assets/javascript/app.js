@@ -157,15 +157,18 @@ function timerCountdown() {
 
 };
 
-$("#restart, #submit, #correct, #incorrect, #unaswered, #remaining-time").hide();
+$("#restart, #submit, #correct, #incorrect, #unaswered, #remaining-time, #qestion-div").hide();
 // Game Start
 $("#start").on("click", gameStart);
 
 function gameStart() {
+    $("#start").hide();
+    $("#submit, #qestion-div #a, #b, #c, #d").show();
     questionDisplay();
 };
 
 function questionDisplay() {
+    $("#remaining-time").show();
     timerCountdown();
 }
 
