@@ -147,7 +147,12 @@ function timerCountdown() {
         timeLeft--;
         // display the timeLeft to the time left div
         $("#remaining-time").html(timeLeft);
+        $("#remaining-time").show();
         // if time runs out
+        if (timeLeft === 0) {
+            clearInterval(timeInterval);
+        }
+
     }, 1000);
 
 };
