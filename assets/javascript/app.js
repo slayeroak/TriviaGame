@@ -147,18 +147,17 @@ function timerCountdown() {
         timeLeft--;
         // display the timeLeft to the time left div
         $("#remaining-time").html(timeLeft);
+        // if time runs out
     })
 
 };
 
-$(document).ready(function() {
+// Game Start
+$("#start").on("click", gameStart);
 
-
-
-
-
-
-});
+function gameStart() {
+    $()
+};
 
 
 
