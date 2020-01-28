@@ -209,7 +209,12 @@ function showAnswer() {
     $("#remaining-time").hide();
     // show the next button
     // $("#next").show();
-    // need to store the correct answer into a variable then compare 
+
+    // handles iterating through the index when teh answer is shown
+    if (questionIndex < 10) {
+        questionIndex++;
+        setTimeout(questionDisplay, 5000);
+    }
 }
 
 
