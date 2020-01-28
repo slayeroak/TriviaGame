@@ -158,7 +158,7 @@ function timerCountdown() {
 
 };
 
-$("#restart, #submit, #correct, #incorrect, #unaswered, #remaining-time, #qestion-div").hide();
+$("#restart, #submit, #next, #correct, #incorrect, #unaswered, #remaining-time, #qestion-div").hide();
 // Game Start
 $("#start").on("click", gameStart);
 
@@ -175,7 +175,7 @@ function questionDisplay() {
     timerCountdown();
     // access object and show question and answers
     $("#question-div").html(questionsArray[questionIndex].question);
-    // console.log(questionsArray[questionIndex].question);
+        // console.log(questionsArray[questionIndex].question);
     $("#answer1").html(questionsArray[questionIndex].ans.a);
     $("#answer2").html(questionsArray[questionIndex].ans.b);
     $("#answer3").html(questionsArray[questionIndex].ans.c);
@@ -183,5 +183,17 @@ function questionDisplay() {
 
 }
 
+// click the answers .answers
+$(".answers").click(function(){
+    showAnswer();
+});
+
+function showAnswer() {
+    // hide the remaining time
+    $("#remaining-time").hide();
+    // show the next button
+    // $("#next").show();
+
+}
 
 
