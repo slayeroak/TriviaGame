@@ -1,6 +1,7 @@
 // Global Variables
 var timeLeft = 20;
 var timeInterval ;
+var questionIndex = 0;
 
 
 // Question Object Array 
@@ -10,7 +11,7 @@ var questionsArray = [
         question: "In ancient Greece, throwing an apple at someone was a declaration of what?",
         ans: {
             a: "hate",
-            b: "Would you like to get lunch?",
+            b: "Would you like to get dinner?",
             c: "love",
             d: "adoption",
         },
@@ -163,13 +164,23 @@ $("#start").on("click", gameStart);
 
 function gameStart() {
     $("#start").hide();
-    $("#submit, #qestion-div #a, #b, #c, #d").show();
+    $("#remaining-time #submit").show();
     questionDisplay();
 };
 
 function questionDisplay() {
-    $("#remaining-time").show();
+    // show questions and answers
+    $("#qestion-div, #answer-div, #a, #b, #c, #d").show();
+    // start timer
     timerCountdown();
+    // access object and show question and answers
+    $("#question-div").html(questionsArray[questionIndex].question);
+    // console.log(questionsArray[questionIndex].question);
+    $("#answer1").html(questionsArray[questionIndex].ans.a);
+    $("#answer2").html(questionsArray[questionIndex].ans.b);
+    $("#answer3").html(questionsArray[questionIndex].ans.c);
+    $("#answer4").html(questionsArray[questionIndex].ans.d);
+
 }
 
 
