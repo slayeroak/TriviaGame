@@ -156,8 +156,12 @@ function timerCountdown() {
 $("#start").on("click", gameStart);
 
 function gameStart() {
-    $()
+    questionDisplay();
 };
+
+function questionDisplay() {
+    timerCountdown();
+}
 
 
 
