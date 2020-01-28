@@ -148,10 +148,11 @@ function timerCountdown() {
         // display the timeLeft to the time left div
         $("#remaining-time").html(timeLeft);
         // if time runs out
-    })
+    }, 1000);
 
 };
 
+$("#restart, #submit, #correct, #incorrect, #unaswered, #remaining-time").hide();
 // Game Start
 $("#start").on("click", gameStart);
 
