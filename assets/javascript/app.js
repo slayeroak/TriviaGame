@@ -212,9 +212,19 @@ function showAnswer() {
 
     // handles iterating through the index when teh answer is shown
     if (questionIndex < 10) {
+        // increast the question index
         questionIndex++;
+        // update the game totals count
+        scoreTotals();
+        // display next question
         setTimeout(questionDisplay, 5000);
     }
+}
+
+function scoreTotals() {
+    $("#correct").html(correctAnsCount);
+    $("#incorrect").html(incorrectAnsCount);
+    $("#correct, #incorrect").show();
 }
 
 
