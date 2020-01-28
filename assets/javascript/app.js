@@ -209,6 +209,8 @@ function showAnswer() {
     $("#remaining-time").hide();
     // show the next button
     // $("#next").show();
+    // need to change answer to new answer
+    var answer = questionsArray[questionIndex].correctAnswer;
 
     // handles iterating through the index when teh answer is shown
     if (questionIndex < 10) {
@@ -222,8 +224,8 @@ function showAnswer() {
 }
 
 function scoreTotals() {
-    $("#correct").html(correctAnsCount);
-    $("#incorrect").html(incorrectAnsCount);
+    $("#correct").html("Corrrect:" + correctAnsCount);
+    $("#incorrect").html("Incorrect" + incorrectAnsCount);
     $("#correct, #incorrect").show();
 }
 
