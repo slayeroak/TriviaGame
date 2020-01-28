@@ -2,6 +2,8 @@
 var timeLeft = 20;
 var timeInterval ;
 var questionIndex = 0;
+var correctAnsCount = 0;
+var incorrectAnsCount = 0;
 
 
 // Question Object Array 
@@ -185,7 +187,21 @@ function questionDisplay() {
 
 // click the answers .answers
 $(".answers").click(function(){
+//    run a showAnswer function
     showAnswer();
+    // need to store the correct answer into a variable then compare 
+    var userChoice = $(this).attr("id");
+    var answer = questionsArray[questionIndex].correctAnswer
+
+    // if user choice = answer increase correctcount if not increase incorrect
+    if (userChoice === answer) {
+        correctAnsCount++;
+    }
+    else {
+        incorrectAnsCount++;
+    }
+    console.log("correct" + correctAnsCount + "incorrect" +incorrectAnsCount);
+
 });
 
 function showAnswer() {
@@ -193,7 +209,7 @@ function showAnswer() {
     $("#remaining-time").hide();
     // show the next button
     // $("#next").show();
-
+    // need to store the correct answer into a variable then compare 
 }
 
 
